@@ -172,7 +172,7 @@
 <body>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="meta"><strong>Effective Date:</strong> May 21, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 22, 2026</p>
+    <p class="meta"><strong>Effective Date:</strong> May 21, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 22, 2026 (moderation flow accuracy pass)</p>
 
     <p class="lead">This Privacy Policy describes how <strong>Renshi</strong> ("we," "our," or "the App") collects, uses, and protects your information when you use the Renshi mobile application.</p>
     <p class="contact">Renshi is operated by Ian Fritz as a sole proprietorship based in Utah, United States. Contact: <strong>renshicombat@yahoo.com</strong>.</p>
@@ -196,7 +196,7 @@
     <p>When you edit or delete a workout, we record an audit entry (timestamp, action taken, and a snapshot of the prior + new values). This log is visible only to you in your account's history view and is deleted with your account.</p>
 
     <h3>Social data</h3>
-    <p>Follow relationships (who you follow and who follows you), team memberships, posts you share to the public Feed (which automatically expire from other users' feeds after 24 hours but remain visible on your profile), comments, reactions, blocks, reports, and badges you've unlocked.</p>
+    <p>Follow relationships (who you follow and who follows you), team memberships, posts you share to the public Feed (which automatically expire from other users' feeds after 24 hours but remain visible on your profile), blocks, reports, and badges you've unlocked.</p>
 
     <h3>Subscription data</h3>
     <p>Subscription status, plan (monthly or yearly), trial dates, renewal status, and the Renshi user ID we pass to our subscription processor (RevenueCat) so it can associate purchase history with your account. <strong>Payment information (card details, Apple ID, App Store transaction IDs) is handled entirely by Apple and RevenueCat — we never see or store your payment method.</strong></p>
@@ -293,7 +293,6 @@
     <p><strong>Conditionally visible:</strong></p>
     <ul>
       <li><strong>Posts you share to the public Feed</strong> are visible to all authenticated users for 24 hours from posting, then archived. Archived posts remain visible on your profile to followers and to you.</li>
-      <li><strong>Comments and reactions</strong> on Feed posts are visible alongside the post.</li>
       <li><strong>Aggregate workout statistics</strong> (total XP, attribute scores, recent streak, time-in-category breakdowns) are visible on your public profile.</li>
     </ul>
     <div class="warn">
@@ -311,7 +310,7 @@
       <li>Your profile row (display name, handle, photo, banner, bio, track, XP totals, attributes)</li>
       <li>Every workout, competition, training camp, weigh-in, scheduled session, and audit log entry</li>
       <li>Every follow relationship, team membership, badge, achievement</li>
-      <li>Every Feed post, comment, reaction, block, and report you authored</li>
+      <li>Every Feed post, block, and report you authored</li>
       <li>Every promo code you redeemed, and every promo code you personally created (if you've created any)</li>
       <li>Any team you own (which also dissolves that team's membership rows for other users)</li>
       <li>Every photo you uploaded (workout, competition, avatar, banner) from Storage</li>
@@ -335,7 +334,7 @@
       <li>Include the subject line: <strong>"Data export request"</strong>.</li>
       <li>State your Renshi handle (e.g., <code>@yourhandle</code>).</li>
     </ol>
-    <p>We will reply within <strong>30 days</strong> with a JSON or CSV bundle containing your profile, workouts, follows, posts, comments, badges, and team memberships — and signed URLs for any photos you've uploaded. The bundle excludes derived data we cannot meaningfully port (e.g., other users' content), and excludes payment data (which lives with Apple / RevenueCat).</p>
+    <p>We will reply within <strong>30 days</strong> with a JSON or CSV bundle containing your profile, workouts, follows, posts, badges, and team memberships — and signed URLs for any photos you've uploaded. The bundle excludes derived data we cannot meaningfully port (e.g., other users' content), and excludes payment data (which lives with Apple / RevenueCat).</p>
     <p>To exercise any other right, email <strong>renshicombat@yahoo.com</strong>. We respond within 30 days.</p>
 
     <h2>6. Security</h2>
@@ -351,8 +350,9 @@
 
     <h2>7. Children's Privacy and Moderation</h2>
     <p>Renshi requires you to be at least <strong>13 years old</strong> to create an account (16 in the EEA, where applicable). We do not knowingly collect information from anyone under that age.</p>
-    <p>If you believe a child has provided us information, or if you encounter user content involving a suspected minor in distress, please email <strong>renshicombat@yahoo.com</strong> with the subject line <strong>"Minor safety report"</strong>. We review every such report within 24 hours and remove violating content immediately, suspend the reporting target's account, and — if the content suggests harm to a child — file a report with the National Center for Missing & Exploited Children (NCMEC) when applicable.</p>
-    <p>Our in-app Report flow (tap the <strong>⋯</strong> menu on any Feed post) is the fastest way to flag minor-safety content; reports route to the same email and are handled identically.</p>
+    <p>If you believe a child has provided us information, or if you encounter user content involving a suspected minor in distress, please email <strong>renshicombat@yahoo.com</strong> with the subject line <strong>"Minor safety report"</strong>. We review every such report within 24 hours and remove violating content immediately, suspend the reporting target's account, and — if the content suggests harm to a child — file a report with the National Center for Missing &amp; Exploited Children (NCMEC) when applicable.</p>
+    <p>For <strong>minor-safety reports specifically</strong>, please use the email path described above — it reaches us directly and is the fastest escalation route. The in-app Report flow also offers a <strong>"Minor in danger"</strong> reason that opens your mail app pre-addressed to that inbox with the correct subject line; tapping it routes your report through the same email channel as if you'd composed it manually.</p>
+    <p>For all other report categories (spam, harassment, sexual content, violence or self-harm, or "other"), tapping the <strong>⋯</strong> menu on any Feed post, profile, or team files the report into our moderation console. We review the moderation console regularly with a target review time of 24 hours.</p>
 
     <h2>8. International Users</h2>
     <p>Renshi is operated from the United States. If you use the App from outside the U.S., your data will be transferred to and processed in the U.S., where data protection laws may differ from your country. By using Renshi, you consent to this transfer.</p>
