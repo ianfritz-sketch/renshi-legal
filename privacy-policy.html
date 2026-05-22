@@ -39,7 +39,7 @@
  
   <h1>Privacy Policy</h1>
   <hr />
-  <p class="dates"><strong>Effective Date:</strong> May 21, 2026 · <strong>Last Updated:</strong> May 21, 2026</p>
+  <p class="dates"><strong>Effective Date:</strong> May 21, 2026 · <strong>Last Updated:</strong> May 23, 2026</p>
  
   <p>This Privacy Policy describes how <strong>Renshi</strong> ("we," "our," or "the App") collects, uses, and protects your information when you use the Renshi mobile application.</p>
  
@@ -60,6 +60,10 @@
   <p><strong>Subscription data.</strong> Subscription status, plan (monthly or yearly), trial dates, renewal status, and the Renshi user ID we pass to our subscription processor (RevenueCat) so it can associate purchase history with your account. <strong>Payment information (card details, Apple ID, App Store transaction IDs) is handled entirely by Apple and RevenueCat — we never see or store your payment method.</strong></p>
  
   <p><strong>Device and usage data.</strong> Basic technical information necessary to operate the app, such as session tokens, timestamps, app version, and crash diagnostics.</p>
+ 
+  <p><strong>Crash data.</strong> When the app encounters an unexpected error, we collect: a stack trace, the type of device (e.g., iPhone 15), the iOS version, and the Renshi app version. This is sent to our crash reporting provider (Sentry — see §3.1) to help us fix bugs. <strong>We do not attach your Renshi user ID, email, or handle to crash reports.</strong> Our crash reporter is configured to omit your IP address. Crash reports cannot be linked back to your identity by us or by Sentry.</p>
+ 
+  <p><strong>Product interaction events.</strong> We log basic event signals (for example: "signed in," "completed onboarding," "logged workout," "subscribed to premium") to our own Supabase database. Each event includes the event name, a timestamp, the app version, and (for signed-in users) your Renshi user ID. We use this to understand which features are being used and to spot drop-offs in onboarding or other flows. <strong>Event property data is scrubbed of personally identifying information before it is sent</strong> (for example, when we log a handle collision we record only the handle's length, never the handle itself). These events stay inside our own Supabase project — we do not share them with any third-party analytics, advertising, or attribution network.</p>
  
   <p><strong>Photo metadata is removed before upload.</strong> Before any photo you attach (workout, profile, or banner) leaves your device, we strip its EXIF data — including location, camera model, and date — using two layers of defense (the picker is configured to omit EXIF, and our upload pipeline re-encodes the image to drop any remaining metadata).</p>
  
@@ -122,10 +126,16 @@
         <td>No end-user data.</td>
         <td>—</td>
       </tr>
+      <tr>
+        <td><strong>Sentry (Functional Software, Inc.)</strong></td>
+        <td>Crash reporting — receives an automatic report each time the app encounters an unexpected error.</td>
+        <td>Stack trace, iOS version, device model, app version. <strong>No Renshi user ID, no email, no handle, no IP address.</strong> Configured to drop personally-identifying information before any event leaves your device.</td>
+        <td><a href="https://sentry.io/privacy/">sentry.io/privacy</a></td>
+      </tr>
     </tbody>
   </table>
  
-  <p>We do not use any other third-party processors. We do not embed advertising SDKs, analytics SDKs, or attribution SDKs.</p>
+  <p>We do not use any other third-party processors. We do not embed advertising SDKs, attribution SDKs, or product-analytics SDKs that track user behavior. The only diagnostic SDK we use is Sentry, configured solely for crash reporting (see above).</p>
  
   <h3>3.2 What other Renshi users can see</h3>
  
