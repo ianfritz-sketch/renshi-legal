@@ -1,258 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Renshi — Privacy Policy</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 48px 24px 96px;
-      line-height: 1.6;
-      color: #111;
-      background: #fff;
-    }
-    a { color: #0a66ff; }
-    a:hover { text-decoration: underline; }
-    nav.back a { color: #555; font-size: 14px; text-decoration: none; }
-    nav.back a:hover { text-decoration: underline; }
-    h1 { font-size: 40px; margin: 24px 0 8px; }
-    h2 { font-size: 24px; margin: 40px 0 12px; }
-    h3 { font-size: 18px; margin: 28px 0 8px; }
-    hr { border: 0; border-top: 1px solid #ddd; margin: 0; }
-    .dates { color: #555; font-size: 15px; margin: 12px 0 32px; }
-    .dates strong { color: #111; }
-    table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
-    th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; vertical-align: top; }
-    th { background: #f6f6f6; font-weight: 600; }
-    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-    ul { padding-left: 22px; }
-    li { margin: 6px 0; }
-    strong { color: #000; }
-  </style>
-</head>
-<body>
-  <nav class="back"><a href="./">← Renshi Legal</a></nav>
- 
-  <h1>Privacy Policy</h1>
-  <hr />
-  <p class="dates"><strong>Effective Date:</strong> May 21, 2026 · <strong>Last Updated:</strong> May 23, 2026</p>
- 
-  <p>This Privacy Policy describes how <strong>Renshi</strong> ("we," "our," or "the App") collects, uses, and protects your information when you use the Renshi mobile application.</p>
- 
-  <p>Renshi is operated by Ian Fritz as a sole proprietorship based in Utah, United States. Contact: <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a>.</p>
- 
-  <h2>1. Information We Collect</h2>
- 
-  <p>When you create an account and use Renshi, we collect:</p>
- 
-  <p><strong>Account information.</strong> Email address and password (passwords are hashed and never stored in plain text), display name, username (handle), self-selected training track (e.g., wrestling, BJJ, boxing, MMA), and an optional bio.</p>
- 
-  <p><strong>Profile content.</strong> Profile photo and banner image, if you choose to upload them.</p>
- 
-  <p><strong>Workout data.</strong> Activity type, intensity, duration, notes, focus areas (e.g., muscle groups, drilling focus), conditioning type, recovery type, and an optional photo attached to each workout. Includes derived statistics: XP totals, attribute scores, streak counts, weekly goals, training-camp progress, weight-cut entries, and badges.</p>
- 
-  <p><strong>Social data.</strong> Follow relationships (who you follow and who follows you), team memberships, posts you share to the public Feed (which automatically expire from other users' feeds after 24 hours but remain visible on your profile), comments, reactions, blocks, reports, and badges you've unlocked.</p>
- 
-  <p><strong>Subscription data.</strong> Subscription status, plan (monthly or yearly), trial dates, renewal status, and the Renshi user ID we pass to our subscription processor (RevenueCat) so it can associate purchase history with your account. <strong>Payment information (card details, Apple ID, App Store transaction IDs) is handled entirely by Apple and RevenueCat — we never see or store your payment method.</strong></p>
- 
-  <p><strong>Device and usage data.</strong> Basic technical information necessary to operate the app, such as session tokens, timestamps, app version, and crash diagnostics.</p>
- 
-  <p><strong>Crash data.</strong> When the app encounters an unexpected error, we collect: a stack trace, the type of device (e.g., iPhone 15), the iOS version, and the Renshi app version. This is sent to our crash reporting provider (Sentry — see §3.1) to help us fix bugs. <strong>We do not attach your Renshi user ID, email, or handle to crash reports.</strong> Our crash reporter is configured to omit your IP address. Crash reports cannot be linked back to your identity by us or by Sentry.</p>
- 
-  <p><strong>Product interaction events.</strong> We log basic event signals (for example: "signed in," "completed onboarding," "logged workout," "subscribed to premium") to our own Supabase database. Each event includes the event name, a timestamp, the app version, and (for signed-in users) your Renshi user ID. We use this to understand which features are being used and to spot drop-offs in onboarding or other flows. <strong>Event property data is scrubbed of personally identifying information before it is sent</strong> (for example, when we log a handle collision we record only the handle's length, never the handle itself). These events stay inside our own Supabase project — we do not share them with any third-party analytics, advertising, or attribution network.</p>
- 
-  <p><strong>Photo metadata is removed before upload.</strong> Before any photo you attach (workout, profile, or banner) leaves your device, we strip its EXIF data — including location, camera model, and date — using two layers of defense (the picker is configured to omit EXIF, and our upload pipeline re-encodes the image to drop any remaining metadata).</p>
- 
-  <p>We do <strong>not</strong> collect:</p>
-  <ul>
-    <li>Precise or coarse location data</li>
-    <li>Contacts, calendar, or biometric data</li>
-    <li>Microphone or audio recordings</li>
-    <li>HealthKit data, step counts, or sensor readings</li>
-    <li>Advertising identifiers (IDFA) or cross-app tracking signals</li>
-  </ul>
- 
-  <h2>2. How We Use Your Information</h2>
- 
-  <p>We use your information solely to operate, maintain, and improve Renshi. Specifically:</p>
-  <ul>
-    <li>To authenticate your account and keep your data synced across devices</li>
-    <li>To compute leaderboards, streaks, XP, attribute scores, training camps, and badges based on the workouts you log</li>
-    <li>To display your public profile, posts, team memberships, and aggregate workout statistics to other users</li>
-    <li>To process subscriptions and manage trial periods</li>
-    <li>To respond to support requests</li>
-    <li>To detect and prevent abuse, including content moderation on the public Feed</li>
-    <li>To send service messages (password resets, account-deletion confirmations, security alerts)</li>
-  </ul>
- 
-  <p>We do <strong>not</strong> sell your data, share it with advertisers, or use it for cross-app or cross-website tracking. Renshi has no advertising SDKs and does not collect data linked to your identity for tracking purposes (see App Store privacy label: <strong>"Tracking: No"</strong>).</p>
- 
-  <h2>3. How Your Information Is Shared</h2>
- 
-  <h3>3.1 Third-party service providers</h3>
- 
-  <p>Your information is processed by the following service providers under contract, who act on our behalf:</p>
- 
-  <table>
-    <thead>
-      <tr><th>Provider</th><th>What it does</th><th>What it receives</th><th>Privacy Policy</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Supabase, Inc.</strong></td>
-        <td>Hosts our Postgres database, authentication system, and file storage (profile photos, banners, workout photos).</td>
-        <td>All app data listed in §1, plus session tokens.</td>
-        <td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td>
-      </tr>
-      <tr>
-        <td><strong>RevenueCat, Inc.</strong></td>
-        <td>Processes subscription state, validates Apple receipts, and stores purchase history linked to your Renshi user ID.</td>
-        <td>Your Supabase user UUID (passed to <code>Purchases.logIn</code>), subscription transaction history, plan, renewal status. <strong>No payment card data.</strong></td>
-        <td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td>
-      </tr>
-      <tr>
-        <td><strong>Apple Inc.</strong></td>
-        <td>Processes payments, manages In-App Purchases, distributes the app, and provides push notification infrastructure.</td>
-        <td>Whatever you submit through the App Store: Apple ID, billing, App Store transaction IDs.</td>
-        <td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td>
-      </tr>
-      <tr>
-        <td><strong>Expo / build tooling</strong></td>
-        <td>Build infrastructure used to compile native iOS/Android binaries.</td>
-        <td>No end-user data.</td>
-        <td>—</td>
-      </tr>
-      <tr>
-        <td><strong>Sentry (Functional Software, Inc.)</strong></td>
-        <td>Crash reporting — receives an automatic report each time the app encounters an unexpected error.</td>
-        <td>Stack trace, iOS version, device model, app version. <strong>No Renshi user ID, no email, no handle, no IP address.</strong> Configured to drop personally-identifying information before any event leaves your device.</td>
-        <td><a href="https://sentry.io/privacy/">sentry.io/privacy</a></td>
-      </tr>
-    </tbody>
-  </table>
- 
-  <p>We do not use any other third-party processors. We do not embed advertising SDKs, attribution SDKs, or product-analytics SDKs that track user behavior. The only diagnostic SDK we use is Sentry, configured solely for crash reporting (see above).</p>
- 
-  <h3>3.2 What other Renshi users can see</h3>
- 
-  <p>Renshi is a social workout-tracking app. By design, <strong>certain information is visible to other authenticated Renshi users</strong>:</p>
- 
-  <p><strong>Always visible to all other authenticated Renshi users:</strong></p>
-  <ul>
-    <li>Display name and handle (username)</li>
-    <li>Profile photo and banner image</li>
-    <li>Self-selected training track</li>
-    <li>Bio (if you've written one)</li>
-    <li>Badges you've unlocked</li>
-    <li>Leaderboard ranking and aggregate XP / attribute scores</li>
-    <li>Team membership</li>
-    <li>Achievements (e.g., "completed first camp")</li>
-  </ul>
- 
-  <p><strong>Conditionally visible:</strong></p>
-  <ul>
-    <li><strong>Posts you share to the public Feed</strong> are visible to all authenticated users for 24 hours from posting, then archived. Archived posts remain visible on your profile to followers and to you.</li>
-    <li><strong>Comments and reactions</strong> on Feed posts are visible alongside the post.</li>
-    <li><strong>Aggregate workout statistics</strong> (total XP, attribute scores, recent streak, time-in-category breakdowns) are visible on your public profile.</li>
-  </ul>
- 
-  <p><strong>Important disclosure (workouts).</strong> Individual workout records (including activity, intensity, duration, focus area, notes, and any attached photo) are stored in our database with row-level security policies that allow other authenticated Renshi users to read your workout records via the in-app social and leaderboard surfaces. This means that, technically, a determined user could read individual workout details by querying our backend directly — not only the summary statistics we surface in the UI. If this is not acceptable for your use case, please do not log sensitive notes or photos. We are evaluating tightening this access on a future release; this disclosure exists so you can make an informed choice today.</p>
- 
-  <p><strong>Profile content note.</strong> Because our <code>profiles</code> table is readable by every authenticated user (so the leaderboard, follow graph, team rosters, and Discover screen work), all of the "always visible" fields above are accessible to any user with a Renshi account, not only to your followers.</p>
- 
-  <h3>3.3 Legal disclosures</h3>
-  <p>We will disclose your information if required by law, valid legal process, or to protect the safety, rights, or property of users or the public.</p>
- 
-  <h2>4. Data Retention and Deletion</h2>
- 
-  <p>We retain your data for as long as your account is active. You can delete your account and all associated data at any time from <strong>Settings → Delete Account</strong>, or by emailing us at <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a>.</p>
- 
-  <p>Deletion is permanent and removes the following within 30 days:</p>
-  <ul>
-    <li>Your profile row (display name, handle, photo, banner, bio, track, XP totals, attributes)</li>
-    <li>Every workout, training camp, weigh-in, scheduled session, and audit log entry</li>
-    <li>Every follow relationship, team membership, badge, achievement</li>
-    <li>Every Feed post, comment, reaction, block, report you authored</li>
-    <li>Every photo you uploaded (workout, avatar, banner) from Storage</li>
-    <li>Your authentication record (so the email can be reused for a new account)</li>
-  </ul>
- 
-  <p>After deletion completes, RevenueCat retains your subscription history under their separate retention policy (for tax, fraud, and accounting reasons) — see their policy for details. Apple separately retains your App Store purchase records under Apple's policies; we have no control over Apple's retention.</p>
- 
-  <h2>5. Your Rights — Including "Download My Data"</h2>
- 
-  <p>Depending on where you live, you may have the right to:</p>
-  <ul>
-    <li><strong>Access</strong> the personal data we hold about you</li>
-    <li><strong>Correct</strong> inaccurate data</li>
-    <li><strong>Delete</strong> your data (use Settings → Delete Account, or email us)</li>
-    <li><strong>Object</strong> to or <strong>restrict</strong> certain processing</li>
-    <li><strong>Receive a portable copy</strong> of your data ("data portability" under GDPR / CCPA)</li>
-  </ul>
- 
-  <h3>How to download a copy of your data</h3>
- 
-  <p>Renshi does not yet have an in-app "Export my data" button. To request a copy of your data:</p>
-  <ol>
-    <li>Email <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a> from the email address you signed up with.</li>
-    <li>Include the subject line: <strong>"Data export request"</strong>.</li>
-    <li>State your Renshi handle (e.g., <code>@yourhandle</code>).</li>
-  </ol>
- 
-  <p>We will reply within <strong>30 days</strong> with a JSON or CSV bundle containing your profile, workouts, follows, posts, comments, badges, and team memberships — and signed URLs for any photos you've uploaded. The bundle excludes derived data we cannot meaningfully port (e.g., other users' content), and excludes payment data (which lives with Apple / RevenueCat).</p>
- 
-  <p>To exercise any other right, email <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a>. We respond within 30 days.</p>
- 
-  <h2>6. Security</h2>
- 
-  <p>We use industry-standard security measures, including:</p>
-  <ul>
-    <li>HTTPS / TLS for every network connection</li>
-    <li>Bcrypt-style password hashing (handled by Supabase Auth)</li>
-    <li>Row-level security policies on every database table</li>
-    <li>Encrypted database backups</li>
-    <li>Multi-attempt retries with constant-time secret comparison on subscription webhook authentication</li>
-  </ul>
- 
-  <p>No system is perfect; we cannot guarantee absolute security. If we discover a breach that affects your data, we will notify you and the relevant authorities within the timeframes required by applicable law.</p>
- 
-  <h2>7. Children's Privacy and Moderation</h2>
- 
-  <p>Renshi requires you to be at least <strong>13 years old</strong> to create an account (16 in the EEA, where applicable). We do not knowingly collect information from anyone under that age.</p>
- 
-  <p>If you believe a child has provided us information, or if you encounter user content involving a suspected minor in distress, please email <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a> with the subject line <strong>"Minor safety report"</strong>. We review every such report within 24 hours and remove violating content immediately, suspend the responsible account, and — if the content suggests harm to a child — file a report with the National Center for Missing &amp; Exploited Children (NCMEC) when applicable.</p>
- 
-  <p>Our in-app Report flow (tap the <strong>⋯</strong> menu on any Feed post) is the fastest way to flag minor-safety content; reports route to the same email and are handled identically.</p>
- 
-  <h2>8. International Users</h2>
- 
-  <p>Renshi is operated from the United States. If you use the App from outside the U.S., your data will be transferred to and processed in the U.S., where data protection laws may differ from your country. By using Renshi, you consent to this transfer.</p>
- 
-  <h2>9. App Tracking Transparency (iOS)</h2>
- 
-  <p>Renshi does <strong>not</strong> track you across other apps or websites. Specifically:</p>
-  <ul>
-    <li>We do not access the iOS Advertising Identifier (IDFA)</li>
-    <li>We do not show an App Tracking Transparency (ATT) prompt</li>
-    <li>We do not embed Meta, Google, AppsFlyer, Adjust, Branch, Singular, or any other attribution or ad-tech SDK</li>
-    <li>Our App Store privacy nutrition label shows <strong>"Tracking: No"</strong></li>
-  </ul>
- 
-  <p>If we ever add a feature that requires tracking, we will request ATT permission before any tracking event fires, update this Privacy Policy with the relevant disclosures, and update the App Store nutrition label.</p>
- 
-  <h2>10. Changes to This Policy</h2>
- 
-  <p>We may update this policy from time to time. When we do, we'll change the "Last Updated" date above and, for material changes, notify users in the App or by email. Continued use of Renshi after a change means you accept the updated policy.</p>
- 
-  <h2>11. Contact</h2>
- 
-  <p>Questions about this policy? Email <a href="mailto:renshicombat@yahoo.com"><strong>renshicombat@yahoo.com</strong></a>.</p>
- 
-  <p>For privacy / data rights requests, please use the subject line patterns listed in §5 so we can route them quickly.</p>
-</body>
-</html>
- 
+# Privacy Policy
+
+**Effective Date:** May 21, 2026
+**Last Updated:** May 22, 2026
+
+This Privacy Policy describes how **Renshi** ("we," "our," or "the App") collects, uses, and protects your information when you use the Renshi mobile application.
+
+Renshi is operated by Ian Fritz as a sole proprietorship based in Utah, United States. Contact: **renshicombat@yahoo.com**.
+
+## 1. Information We Collect
+
+When you create an account and use Renshi, we collect:
+
+**Account information.** Email address and password (passwords are hashed and never stored in plain text), display name, username (handle), self-selected training track (e.g., wrestling, BJJ, boxing, MMA), and an optional bio.
+
+**Profile content.** Profile photo and banner image, if you choose to upload them.
+
+**Workout data.** Activity type, intensity, duration, notes, focus areas (e.g., muscle groups, drilling focus), conditioning type, recovery type, and an optional photo attached to each workout. Includes derived statistics: XP totals, attribute scores, streak counts, weekly goals, training-camp progress, weight-cut entries, and badges.
+
+**Competition data.** When you log a competition (tournament, meet, fight, or match), we collect: the event name, the date it occurred, your match results (a list of wins/losses with optional per-match notes, up to 50 entries), your self-rated intensity (1–5), short tags describing what went well and what needs work, free-text notes, and an optional photo. Competitions feed your win-loss record on your public profile and may be referenced in feed posts you choose to share.
+
+**Internal audit log.** When you edit or delete a workout, we record an audit entry (timestamp, action taken, and a snapshot of the prior + new values). This log is visible only to you in your account's history view and is deleted with your account.
+
+**Social data.** Follow relationships (who you follow and who follows you), team memberships, posts you share to the public Feed (which automatically expire from other users' feeds after 24 hours but remain visible on your profile), comments, reactions, blocks, reports, and badges you've unlocked.
+
+**Subscription data.** Subscription status, plan (monthly or yearly), trial dates, renewal status, and the Renshi user ID we pass to our subscription processor (RevenueCat) so it can associate purchase history with your account. **Payment information (card details, Apple ID, App Store transaction IDs) is handled entirely by Apple and RevenueCat — we never see or store your payment method.**
+
+**Device and usage data.** Basic technical information necessary to operate the app, such as session tokens, timestamps, app version, and crash diagnostics.
+
+**Crash data.** When the app encounters an unexpected error, we collect: a stack trace, the type of device (e.g., iPhone 15), the iOS version, and the Renshi app version. This is sent to our crash reporting provider (Sentry — see §3.1) to help us fix bugs. **We do not attach your Renshi user ID, email, or handle to crash reports.** Our crash reporter is configured to omit your IP address. Crash reports cannot be linked back to your identity by us or by Sentry.
+
+**Product interaction events.** We log basic event signals (for example: "signed in," "completed onboarding," "logged workout," "subscribed to premium") to our own Supabase database. Each event includes the event name, a timestamp, the app version, the platform (iOS or Android), and (for signed-in users) your Renshi user ID. We use this to understand which features are being used and to spot drop-offs in onboarding or other flows. **By design, event properties never contain personally identifying free-text fields** — when we record a signal that might otherwise include identifying content (for example a handle collision during sign-up), we send only a derived signal such as the handle's length, never the handle itself. This is a convention enforced in our analytics module and at code review; we do not route raw user-generated text (handles, names, emails, bios, workout notes, feed-post bodies, comment text) through event properties. These events stay inside our own Supabase project — we do not share them with any third-party analytics, advertising, or attribution network.
+
+**Photo metadata is removed before upload.** Before any photo you attach (workout, profile, or banner) leaves your device, we strip its EXIF data — including location, camera model, and date — using two layers of defense (the picker is configured to omit EXIF, and our upload pipeline re-encodes the image to drop any remaining metadata).
+
+We do **not** collect:
+
+- Precise or coarse location data
+- Contacts, calendar, or biometric data
+- Microphone or audio recordings
+- Health-kit data, step counts, or sensor readings
+- Advertising identifiers (IDFA) or cross-app tracking signals
+
+## 2. How We Use Your Information
+
+We use your information solely to operate, maintain, and improve Renshi. Specifically:
+
+- To authenticate your account and keep your data synced across devices
+- To compute leaderboards, streaks, XP, attribute scores, training camps, and badges based on the workouts you log
+- To display your public profile, posts, team memberships, and aggregate workout statistics to other users
+- To process subscriptions and manage trial periods
+- To respond to support requests
+- To detect and prevent abuse, including content moderation on the public Feed
+- To send service messages (password resets, account-deletion confirmations, security alerts)
+
+We do **not** sell your data, share it with advertisers, or use it for cross-app or cross-website tracking. Renshi has no advertising SDKs and does not collect data linked to your identity for tracking purposes (see App Store privacy label: **"Tracking: No"**).
+
+## 3. How Your Information Is Shared
+
+### 3.1 Third-party service providers
+
+Your information is processed by the following service providers under contract, who act on our behalf:
+
+| Provider | What it does | What it receives | Privacy Policy |
+| --- | --- | --- | --- |
+| **Supabase, Inc.** | Hosts our Postgres database, authentication system, and file storage (profile photos, banners, workout photos). | All app data listed in §1, plus session tokens. | [supabase.com/privacy](https://supabase.com/privacy) |
+| **RevenueCat, Inc.** | Processes subscription state, validates Apple receipts, and stores purchase history linked to your Renshi user ID. | Your Supabase user UUID (passed to `Purchases.logIn`), subscription transaction history, plan, renewal status. **No payment card data.** | [revenuecat.com/privacy](https://www.revenuecat.com/privacy) |
+| **Apple Inc.** | Processes payments, manages In-App Purchases, and distributes the app. | Whatever you submit through the App Store: Apple ID, billing, App Store transaction IDs. | [apple.com/legal/privacy](https://www.apple.com/legal/privacy/) |
+| **Sentry (Functional Software, Inc.)** | Crash reporting — receives an automatic report each time the app encounters an unexpected error. | Stack trace, iOS version, device model, app version. **No Renshi user ID, no email, no handle, no IP address.** Configured to drop personally-identifying information before any event leaves your device. | [sentry.io/privacy](https://sentry.io/privacy/) |
+
+We do not use any other third-party processors. We do not embed advertising SDKs, attribution SDKs, or product-analytics SDKs that track user behavior. The only diagnostic SDK we use is Sentry, configured solely for crash reporting (see above).
+
+### 3.2 What other Renshi users can see
+
+Renshi is a social workout-tracking app. By design, **certain information is visible to other authenticated Renshi users**:
+
+**Always visible to all other authenticated Renshi users:**
+
+- Display name and handle (username)
+- Profile photo and banner image
+- Self-selected training track
+- Bio (if you've written one)
+- Badges you've unlocked
+- Leaderboard ranking and aggregate XP / attribute scores
+- Team membership
+- Achievements (e.g., "completed first camp")
+
+**Conditionally visible:**
+
+- **Posts you share to the public Feed** are visible to all authenticated users for 24 hours from posting, then archived. Archived posts remain visible on your profile to followers and to you.
+- **Comments and reactions** on Feed posts are visible alongside the post.
+- **Aggregate workout statistics** (total XP, attribute scores, recent streak, time-in-category breakdowns) are visible on your public profile.
+
+**Important disclosure (workouts).** Individual workout records (including activity, intensity, duration, focus area, notes, and any attached photo) are stored in our database with row-level security policies that allow other authenticated Renshi users to read your workout records via the in-app social and leaderboard surfaces. This means that, technically, a determined user could read individual workout details by querying our backend directly — not only the summary statistics we surface in the UI. If this is not acceptable for your use case, please do not log sensitive notes or photos. We are evaluating tightening this access on a future release; this disclosure exists so you can make an informed choice today.
+
+**Profile content note.** Because our `profiles` table is readable by every authenticated user (so the leaderboard, follow graph, team rosters, and Discover screen work), all of the "always visible" fields above are accessible to any user with a Renshi account, not only to your followers.
+
+### 3.3 Legal disclosures
+
+We will disclose your information if required by law, valid legal process, or to protect the safety, rights, or property of users or the public.
+
+## 4. Data Retention and Deletion
+
+We retain your data for as long as your account is active. You can delete your account and all associated data at any time from **Settings → Delete Account**, or by emailing us at **renshicombat@yahoo.com**.
+
+Deletion is permanent and removes the following within 30 days:
+
+- Your profile row (display name, handle, photo, banner, bio, track, XP totals, attributes)
+- Every workout, competition, training camp, weigh-in, scheduled session, and audit log entry
+- Every follow relationship, team membership, badge, achievement
+- Every Feed post, comment, reaction, block, and report you authored
+- Every promo code you redeemed, and every promo code you personally created (if you've created any)
+- Any team you own (which also dissolves that team's membership rows for other users)
+- Every photo you uploaded (workout, competition, avatar, banner) from Storage
+- Your authentication record (so the email can be reused for a new account)
+
+After deletion completes, RevenueCat retains your subscription history under their separate retention policy (for tax, fraud, and accounting reasons) — see their policy for details. Apple separately retains your App Store purchase records under Apple's policies; we have no control over Apple's retention.
+
+## 5. Your Rights — Including "Download My Data"
+
+Depending on where you live, you may have the right to:
+
+- **Access** the personal data we hold about you
+- **Correct** inaccurate data
+- **Delete** your data (use Settings → Delete Account, or email us)
+- **Object** to or **restrict** certain processing
+- **Receive a portable copy** of your data ("data portability" under GDPR / CCPA)
+
+### How to download a copy of your data
+
+Renshi does not yet have an in-app "Export my data" button. To request a copy of your data:
+
+1. Email **renshicombat@yahoo.com** from the email address you signed up with.
+2. Include the subject line: **"Data export request"**.
+3. State your Renshi handle (e.g., `@yourhandle`).
+
+We will reply within **30 days** with a JSON or CSV bundle containing your profile, workouts, follows, posts, comments, badges, and team memberships — and signed URLs for any photos you've uploaded. The bundle excludes derived data we cannot meaningfully port (e.g., other users' content), and excludes payment data (which lives with Apple / RevenueCat).
+
+To exercise any other right, email **renshicombat@yahoo.com**. We respond within 30 days.
+
+## 6. Security
+
+We use industry-standard security measures, including:
+
+- HTTPS / TLS for every network connection
+- Bcrypt-style password hashing (handled by Supabase Auth)
+- Row-level security policies on every database table
+- Encrypted database backups
+- Multi-attempt retries with constant-time secret comparison on subscription webhook authentication
+
+No system is perfect; we cannot guarantee absolute security. If we discover a breach that affects your data, we will notify you and the relevant authorities within the timeframes required by applicable law.
+
+## 7. Children's Privacy and Moderation
+
+Renshi requires you to be at least **13 years old** to create an account (16 in the EEA, where applicable). We do not knowingly collect information from anyone under that age.
+
+If you believe a child has provided us information, or if you encounter user content involving a suspected minor in distress, please email **renshicombat@yahoo.com** with the subject line **"Minor safety report"**. We review every such report within 24 hours and remove violating content immediately, suspend the reporting target's account, and — if the content suggests harm to a child — file a report with the National Center for Missing & Exploited Children (NCMEC) when applicable.
+
+Our in-app Report flow (tap the **⋯** menu on any Feed post) is the fastest way to flag minor-safety content; reports route to the same email and are handled identically.
+
+## 8. International Users
+
+Renshi is operated from the United States. If you use the App from outside the U.S., your data will be transferred to and processed in the U.S., where data protection laws may differ from your country. By using Renshi, you consent to this transfer.
+
+## 9. App Tracking Transparency (iOS)
+
+Renshi does **not** track you across other apps or websites. Specifically:
+
+- We do not access the iOS Advertising Identifier (IDFA)
+- We do not show an App Tracking Transparency (ATT) prompt
+- We do not embed Meta, Google, AppsFlyer, Adjust, Branch, Singular, or any other attribution or ad-tech SDK
+- Our App Store privacy nutrition label shows **"Tracking: No"**
+
+If we ever add a feature that requires tracking, we will request ATT permission before any tracking event fires, update this Privacy Policy with the relevant disclosures, and update the App Store nutrition label.
+
+## 10. Changes to This Policy
+
+We may update this policy from time to time. When we do, we'll change the "Last Updated" date above and, for material changes, notify users in the App or by email. Continued use of Renshi after a change means you accept the updated policy.
+
+## 11. Contact
+
+Questions about this policy? Email **renshicombat@yahoo.com**.
+
+For privacy / data rights requests, please use the subject line patterns listed in §5 so we can route them quickly.
