@@ -18,164 +18,56 @@
       --warn-text: #fca5a5;
     }
     * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 48px 24px 96px;
-    }
-    h1 {
-      font-size: 32px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      margin: 0 0 8px;
-      color: #fff;
-    }
-    h2 {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      margin: 40px 0 12px;
-      color: #fff;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
-    }
-    h3 {
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      margin: 28px 0 10px;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+    h1 { font-size: 32px; font-weight: 900; letter-spacing: 1px; margin: 0 0 8px; color: #fff; }
+    h2 { font-size: 22px; font-weight: 800; letter-spacing: 0.5px; margin: 40px 0 12px; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    h3 { font-size: 16px; font-weight: 800; letter-spacing: 0.5px; margin: 28px 0 10px; color: var(--gold); text-transform: uppercase; }
     p { margin: 0 0 14px; color: #e5e5e5; }
     strong { color: #fff; font-weight: 700; }
     a { color: var(--gold); text-decoration: underline; }
     a:hover { color: #fde047; }
     ul, ol { margin: 0 0 16px; padding-left: 22px; }
     li { margin-bottom: 6px; color: #e5e5e5; }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 13px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2px 6px;
-      color: var(--gold);
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 0 0 24px;
-    }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; color: var(--gold); }
+    .meta { color: var(--muted); font-size: 13px; margin: 0 0 24px; }
     .meta strong { color: #fff; }
-    .lead {
-      font-size: 16px;
-      color: #d4d4d4;
-      margin: 0 0 8px;
-    }
-    .contact {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 0 0 32px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0 20px;
-      font-size: 14px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    th, td {
-      padding: 12px 14px;
-      text-align: left;
-      vertical-align: top;
-      border-bottom: 1px solid var(--border);
-    }
-    th {
-      background: #1a1a1a;
-      color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
+    .lead { font-size: 16px; color: #d4d4d4; margin: 0 0 8px; }
+    .contact { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+    .avail { background: rgba(250, 204, 21, 0.06); border: 1px solid rgba(250, 204, 21, 0.35); border-radius: 12px; padding: 16px 18px; margin: 0 0 32px; color: #e5e5e5; font-size: 14px; }
+    .avail strong { color: var(--gold); }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    th, td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+    th { background: #1a1a1a; color: var(--gold); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 900; }
     tr:last-child td { border-bottom: 0; }
     td { color: #d4d4d4; }
     td strong { color: #fff; }
-    .callout {
-      background: rgba(250, 204, 21, 0.06);
-      border: 1px solid rgba(250, 204, 21, 0.35);
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 16px 0;
-      color: #e5e5e5;
-    }
-    .warn {
-      background: var(--warn-bg);
-      border: 1px solid var(--warn-border);
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 16px 0;
-      color: #e5e5e5;
-    }
+    .callout { background: rgba(250, 204, 21, 0.06); border: 1px solid rgba(250, 204, 21, 0.35); border-radius: 12px; padding: 16px 18px; margin: 16px 0; color: #e5e5e5; }
+    .warn { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 12px; padding: 16px 18px; margin: 16px 0; color: #e5e5e5; }
     .warn strong { color: var(--warn-text); }
-    .footer-note {
-      margin-top: 64px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      color: var(--dim);
-      font-size: 13px;
-      text-align: center;
-    }
+    .footer-note { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--dim); font-size: 13px; text-align: center; }
     @media (max-width: 600px) {
       .wrap { padding: 32px 18px 64px; }
       h1 { font-size: 26px; }
       h2 { font-size: 19px; }
       table, thead, tbody, tr, th, td { display: block; }
       thead { display: none; }
-      tr {
-        border-bottom: 1px solid var(--border);
-        padding: 12px 0;
-      }
+      tr { border-bottom: 1px solid var(--border); padding: 12px 0; }
       tr:last-child { border-bottom: 0; }
-      td {
-        border: 0;
-        padding: 4px 14px;
-      }
-      td::before {
-        content: attr(data-label);
-        display: block;
-        color: var(--gold);
-        font-size: 10px;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        font-weight: 900;
-        margin-top: 6px;
-        margin-bottom: 2px;
-      }
+      td { border: 0; padding: 4px 14px; }
+      td::before { content: attr(data-label); display: block; color: var(--gold); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 900; margin-top: 6px; margin-bottom: 2px; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="meta"><strong>Effective Date:</strong> May 21, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 22, 2026 (moderation flow accuracy pass)</p>
+    <p class="meta"><strong>Effective Date:</strong> May 21, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 22, 2026 (US-and-non-EU launch posture; CCPA + lawful basis + sensitive PI + retention specifics)</p>
 
     <p class="lead">This Privacy Policy describes how <strong>Renshi</strong> ("we," "our," or "the App") collects, uses, and protects your information when you use the Renshi mobile application.</p>
     <p class="contact">Renshi is operated by Ian Fritz as a sole proprietorship based in Utah, United States. Contact: <strong>renshicombat@yahoo.com</strong>.</p>
+
+    <div class="avail"><strong>Service availability.</strong> Renshi is currently offered to residents of the United States and other countries <strong>outside the European Union (EU), the European Economic Area (EEA), and the United Kingdom (UK)</strong>. When you create an account, you affirm that you are not a resident of those regions. We do not knowingly accept signups from those jurisdictions at this time; we may expand availability in the future, and if we do, this policy will be updated to reflect the additional rights that apply to residents of those regions under the GDPR and UK GDPR.</div>
 
     <h2>1. Information We Collect</h2>
     <p>When you create an account and use Renshi, we collect:</p>
@@ -213,6 +105,9 @@
     <h3>Photo metadata is removed before upload</h3>
     <p>Before any photo you attach (workout, profile, or banner) leaves your device, we strip its EXIF data — including location, camera model, and date — using two layers of defense (the picker is configured to omit EXIF, and our upload pipeline re-encodes the image to drop any remaining metadata).</p>
 
+    <h3>Sensitive personal information</h3>
+    <p>Some of the data above (workout duration and intensity, weigh-in entries, training-camp progress, and similar fitness signals) qualifies as <strong>fitness or health-related information</strong> under California's CPRA and similar laws. We process this category of data solely to deliver the app's core training-tracker features — leaderboards, attribute scoring, training-camp planning, and weight-cut tracking — and <strong>not</strong> for advertising, profiling beyond those features, or any other purpose. You can stop generating new fitness data at any time by not logging workouts; you can erase all of it by deleting your account from Settings → Delete Account.</p>
+
     <p>We do <strong>not</strong> collect:</p>
     <ul>
       <li>Precise or coarse location data</li>
@@ -231,9 +126,22 @@
       <li>To process subscriptions and manage trial periods</li>
       <li>To respond to support requests</li>
       <li>To detect and prevent abuse, including content moderation on the public Feed</li>
-      <li>To send service messages (password resets, account-deletion confirmations, security alerts)</li>
+      <li>To send transactional service messages (password resets, account-deletion confirmations, security alerts)</li>
     </ul>
-    <p>We do <strong>not</strong> sell your data, share it with advertisers, or use it for cross-app or cross-website tracking. Renshi has no advertising SDKs and does not collect data linked to your identity for tracking purposes (see App Store privacy label: <strong>"Tracking: No"</strong>).</p>
+
+    <p><strong>No marketing email.</strong> We do not send marketing or promotional email today. If we ever add a marketing channel, it will be opt-in only and every message will carry a one-tap unsubscribe link. The only emails you'll receive from Renshi today are the transactional messages listed above.</p>
+
+    <p><strong>No sale, no behavioral advertising.</strong> We do <strong>not</strong> sell your personal information, share it with advertisers, or use it for cross-app, cross-site, or cross-context behavioral tracking or advertising. Renshi has no advertising SDKs and does not collect data linked to your identity for tracking purposes (see App Store privacy label: <strong>"Tracking: No"</strong>). For California residents: under the CCPA/CPRA, "sale" and "sharing" have specific legal meanings; we do not engage in either as those terms are defined. See <strong>§10 (Your California Privacy Rights)</strong> for more.</p>
+
+    <p><strong>Algorithmic leaderboards and scores are not "automated decisions."</strong> Renshi computes leaderboard rankings, XP totals, attribute scores, and your OVR rating algorithmically from the activity you log. These rankings are intended for the app's gamification and social features and have <strong>no legal effect</strong> on you, do not significantly affect your finances, employment, healthcare, or any other consequential aspect of your life, and are not "automated decision-making" in the regulatory sense.</p>
+
+    <p><strong>Lawful bases for processing.</strong> Where applicable privacy laws (other than the GDPR — see Service availability above) require us to name a legal basis for each processing purpose, our bases are:</p>
+    <ul>
+      <li><strong>Performance of our agreement with you</strong> (operating your account, syncing data, processing subscriptions, sending transactional messages, displaying your public profile and aggregate stats as part of the social product you signed up for).</li>
+      <li><strong>Legitimate interest</strong> in keeping the service safe and functional (abuse detection, content moderation, crash reporting, and the first-party product-interaction analytics described in §1).</li>
+      <li><strong>Your explicit choice</strong> to log fitness data — by logging workouts, weigh-ins, and competitions, you are providing this information voluntarily and asking us to store and process it for the features you use.</li>
+      <li><strong>Compliance with legal obligations</strong> when we respond to lawful requests from authorities or report content involving the safety of a minor.</li>
+    </ul>
 
     <h2>3. How Your Information Is Shared</h2>
 
@@ -241,41 +149,17 @@
     <p>Your information is processed by the following service providers under contract, who act on our behalf:</p>
     <table>
       <thead>
-        <tr>
-          <th>Provider</th>
-          <th>What it does</th>
-          <th>What it receives</th>
-          <th>Privacy Policy</th>
-        </tr>
+        <tr><th>Provider</th><th>What it does</th><th>What it receives</th><th>Privacy Policy</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td data-label="Provider"><strong>Supabase, Inc.</strong></td>
-          <td data-label="What it does">Hosts our Postgres database, authentication system, and file storage (profile photos, banners, workout photos).</td>
-          <td data-label="What it receives">All app data listed in §1, plus session tokens.</td>
-          <td data-label="Privacy Policy"><a href="https://supabase.com/privacy">supabase.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td data-label="Provider"><strong>RevenueCat, Inc.</strong></td>
-          <td data-label="What it does">Processes subscription state, validates Apple receipts, and stores purchase history linked to your Renshi user ID.</td>
-          <td data-label="What it receives">Your Supabase user UUID (passed to <code>Purchases.logIn</code>), subscription transaction history, plan, renewal status. <strong>No payment card data.</strong></td>
-          <td data-label="Privacy Policy"><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td data-label="Provider"><strong>Apple Inc.</strong></td>
-          <td data-label="What it does">Processes payments, manages In-App Purchases, and distributes the app.</td>
-          <td data-label="What it receives">Whatever you submit through the App Store: Apple ID, billing, App Store transaction IDs.</td>
-          <td data-label="Privacy Policy"><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td>
-        </tr>
-        <tr>
-          <td data-label="Provider"><strong>Sentry (Functional Software, Inc.)</strong></td>
-          <td data-label="What it does">Crash reporting — receives an automatic report each time the app encounters an unexpected error.</td>
-          <td data-label="What it receives">Stack trace, iOS version, device model, app version. <strong>No Renshi user ID, no email, no handle, no IP address.</strong> Configured to drop personally-identifying information before any event leaves your device.</td>
-          <td data-label="Privacy Policy"><a href="https://sentry.io/privacy/">sentry.io/privacy</a></td>
-        </tr>
+        <tr><td data-label="Provider"><strong>Supabase, Inc.</strong></td><td data-label="What it does">Hosts our Postgres database, authentication system, and file storage (profile photos, banners, workout photos).</td><td data-label="What it receives">All app data listed in §1, plus session tokens.</td><td data-label="Privacy Policy"><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
+        <tr><td data-label="Provider"><strong>RevenueCat, Inc.</strong></td><td data-label="What it does">Processes subscription state, validates Apple receipts, and stores purchase history linked to your Renshi user ID.</td><td data-label="What it receives">Your Supabase user UUID (passed to <code>Purchases.logIn</code>), subscription transaction history, plan, renewal status. <strong>No payment card data.</strong></td><td data-label="Privacy Policy"><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td></tr>
+        <tr><td data-label="Provider"><strong>Apple Inc.</strong></td><td data-label="What it does">Processes payments, manages In-App Purchases, and distributes the app.</td><td data-label="What it receives">Whatever you submit through the App Store: Apple ID, billing, App Store transaction IDs.</td><td data-label="Privacy Policy"><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td></tr>
+        <tr><td data-label="Provider"><strong>Sentry (Functional Software, Inc.)</strong></td><td data-label="What it does">Crash reporting — receives an automatic report each time the app encounters an unexpected error.</td><td data-label="What it receives">Stack trace, iOS version, device model, app version. <strong>No Renshi user ID, no email, no handle, no IP address.</strong> Configured to drop personally-identifying information before any event leaves your device.</td><td data-label="Privacy Policy"><a href="https://sentry.io/privacy/">sentry.io/privacy</a></td></tr>
+        <tr><td data-label="Provider"><strong>GitHub, Inc.</strong></td><td data-label="What it does">Hosts this Privacy Policy, our Terms of Service, and our password-reset web page via GitHub Pages (<code>renshicombat.github.io</code>).</td><td data-label="What it receives">When you tap "Privacy Policy" or "Terms of Service" in the app, your device requests the page from GitHub. GitHub logs requests under their own terms (typically including IP address and User-Agent). No app data is sent to GitHub.</td><td data-label="Privacy Policy"><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">github.com/site/privacy</a></td></tr>
       </tbody>
     </table>
-    <p>We do not use any other third-party processors. We do not embed advertising SDKs, attribution SDKs, or product-analytics SDKs that track user behavior. The only diagnostic SDK we use is Sentry, configured solely for crash reporting (see above).</p>
+    <p>We do not use any other third-party processors. We do not embed advertising SDKs, attribution SDKs, or product-analytics SDKs that track user behavior. The only diagnostic SDK we use is Sentry, configured solely for crash reporting (see above). Each processor above operates under a data-processing addendum or equivalent contractual safeguards consistent with their published terms.</p>
 
     <h3>3.2 What other Renshi users can see</h3>
     <p>Renshi is a social workout-tracking app. By design, <strong>certain information is visible to other authenticated Renshi users</strong>:</p>
@@ -295,16 +179,22 @@
       <li><strong>Posts you share to the public Feed</strong> are visible to all authenticated users for 24 hours from posting, then archived. Archived posts remain visible on your profile to followers and to you.</li>
       <li><strong>Aggregate workout statistics</strong> (total XP, attribute scores, recent streak, time-in-category breakdowns) are visible on your public profile.</li>
     </ul>
-    <div class="warn">
-      <p><strong>Important disclosure (workouts).</strong> Individual workout records (including activity, intensity, duration, focus area, notes, and any attached photo) are stored in our database with row-level security policies that allow other authenticated Renshi users to read your workout records via the in-app social and leaderboard surfaces. This means that, technically, a determined user could read individual workout details by querying our backend directly — not only the summary statistics we surface in the UI. If this is not acceptable for your use case, please do not log sensitive notes or photos. We are evaluating tightening this access on a future release; this disclosure exists so you can make an informed choice today.</p>
-    </div>
+    <div class="warn"><p><strong>Important disclosure (workouts).</strong> Individual workout records (including activity, intensity, duration, focus area, notes, and any attached photo) are stored in our database with row-level security policies that allow other authenticated Renshi users to read your workout records via the in-app social and leaderboard surfaces. This means that, technically, a determined user could read individual workout details by querying our backend directly — not only the summary statistics we surface in the UI. If this is not acceptable for your use case, please do not log sensitive notes or photos. We are evaluating tightening this access on a future release; this disclosure exists so you can make an informed choice today.</p></div>
     <p><strong>Profile content note.</strong> Because our <code>profiles</code> table is readable by every authenticated user (so the leaderboard, follow graph, team rosters, and Discover screen work), all of the "always visible" fields above are accessible to any user with a Renshi account, not only to your followers.</p>
 
     <h3>3.3 Legal disclosures</h3>
     <p>We will disclose your information if required by law, valid legal process, or to protect the safety, rights, or property of users or the public.</p>
 
     <h2>4. Data Retention and Deletion</h2>
-    <p>We retain your data for as long as your account is active. You can delete your account and all associated data at any time from <strong>Settings → Delete Account</strong>, or by emailing us at <strong>renshicombat@yahoo.com</strong>.</p>
+    <p><strong>While your account is active</strong>, we retain the data you generate (profile, workouts, competitions, training camps, weigh-ins, scheduled sessions, audit log entries, follows, team memberships, badges, achievements, Feed posts, blocks, reports, and any photos you've uploaded). You can delete your account and all associated data at any time from <strong>Settings → Delete Account</strong>, or by emailing us at <strong>renshicombat@yahoo.com</strong>.</p>
+    <p><strong>Specific retention periods for non-account data:</strong></p>
+    <ul>
+      <li><strong>Crash diagnostics</strong> (Sentry): retained by Sentry under their own retention policy, typically 90 days.</li>
+      <li><strong>Product interaction events</strong> (our Supabase analytics table): retained for up to <strong>13 months</strong> from the event timestamp, then automatically deleted.</li>
+      <li><strong>Database backups</strong>: encrypted backups are retained by Supabase under our plan's policy, typically up to <strong>30 days</strong>. Restored data after a recovery event would inherit the deletion semantics described below.</li>
+      <li><strong>Subscription history</strong> (RevenueCat + Apple): retained by those providers under their own retention policies for tax, fraud, and accounting reasons. We have no control over those windows; see their respective privacy policies for specifics.</li>
+      <li><strong>Account-deletion confirmation emails</strong>: kept by us for up to 90 days as a deletion-audit record, then deleted.</li>
+    </ul>
     <p>Deletion is permanent and removes the following within 30 days:</p>
     <ul>
       <li>Your profile row (display name, handle, photo, banner, bio, track, XP totals, attributes)</li>
@@ -349,13 +239,15 @@
     <p>No system is perfect; we cannot guarantee absolute security. If we discover a breach that affects your data, we will notify you and the relevant authorities within the timeframes required by applicable law.</p>
 
     <h2>7. Children's Privacy and Moderation</h2>
-    <p>Renshi requires you to be at least <strong>13 years old</strong> to create an account (16 in the EEA, where applicable). We do not knowingly collect information from anyone under that age.</p>
+    <p>Renshi requires you to be at least <strong>13 years old</strong> to create an account. We do not knowingly collect information from anyone under that age.</p>
     <p>If you believe a child has provided us information, or if you encounter user content involving a suspected minor in distress, please email <strong>renshicombat@yahoo.com</strong> with the subject line <strong>"Minor safety report"</strong>. We review every such report within 24 hours and remove violating content immediately, suspend the reporting target's account, and — if the content suggests harm to a child — file a report with the National Center for Missing &amp; Exploited Children (NCMEC) when applicable.</p>
     <p>For <strong>minor-safety reports specifically</strong>, please use the email path described above — it reaches us directly and is the fastest escalation route. The in-app Report flow also offers a <strong>"Minor in danger"</strong> reason that opens your mail app pre-addressed to that inbox with the correct subject line; tapping it routes your report through the same email channel as if you'd composed it manually.</p>
     <p>For all other report categories (spam, harassment, sexual content, violence or self-harm, or "other"), tapping the <strong>⋯</strong> menu on any Feed post, profile, or team files the report into our moderation console. We review the moderation console regularly with a target review time of 24 hours.</p>
 
     <h2>8. International Users</h2>
-    <p>Renshi is operated from the United States. If you use the App from outside the U.S., your data will be transferred to and processed in the U.S., where data protection laws may differ from your country. By using Renshi, you consent to this transfer.</p>
+    <p>Renshi is operated from the United States. Our service providers (Supabase, RevenueCat, Sentry, Apple, GitHub) primarily process data in the United States. If you use the App from outside the U.S., your data will be transferred to and processed in the U.S., where data protection laws may differ from your country.</p>
+    <p>As stated at the top of this policy, <strong>Renshi is not currently offered to residents of the European Union, European Economic Area, or United Kingdom.</strong> When you create an account you affirm that you are not a resident of those regions. If we expand availability to those jurisdictions in the future, we will update this policy to disclose the additional cross-border-transfer mechanisms (Standard Contractual Clauses, the EU-US Data Privacy Framework, and equivalents) that apply, and we will provide the additional GDPR / UK GDPR rights and contact paths (including an EU representative) that residents of those regions are entitled to.</p>
+    <p>For all other international users: by using Renshi, you consent to your data being transferred to and processed in the United States.</p>
 
     <h2>9. App Tracking Transparency (iOS)</h2>
     <p>Renshi does <strong>not</strong> track you across other apps or websites. Specifically:</p>
@@ -367,12 +259,46 @@
     </ul>
     <p>If we ever add a feature that requires tracking, we will request ATT permission before any tracking event fires, update this Privacy Policy with the relevant disclosures, and update the App Store nutrition label.</p>
 
-    <h2>10. Changes to This Policy</h2>
+    <h2>10. Your California Privacy Rights</h2>
+    <p>This section is provided for California residents under the California Consumer Privacy Act of 2018 ("CCPA"), as amended by the California Privacy Rights Act of 2020 ("CPRA"). Renshi may or may not meet the statutory thresholds that make every CCPA obligation legally binding on us; we adopt these practices proactively as a baseline. If you are a California resident, you have the rights described below.</p>
+    <p><strong>Categories of personal information we collect and have collected in the last 12 months:</strong></p>
+    <table>
+      <thead><tr><th>CCPA category</th><th>Specific data</th></tr></thead>
+      <tbody>
+        <tr><td data-label="CCPA category">Identifiers</td><td data-label="Specific data">Email, display name, handle, Renshi user ID, Supabase auth UUID, RevenueCat user ID</td></tr>
+        <tr><td data-label="CCPA category">Customer records</td><td data-label="Specific data">Account information (§1 above)</td></tr>
+        <tr><td data-label="CCPA category">Commercial information</td><td data-label="Specific data">Subscription status, plan, trial dates, redemption history</td></tr>
+        <tr><td data-label="CCPA category">Internet / electronic network activity</td><td data-label="Specific data">Product interaction events, crash diagnostics, app version, platform</td></tr>
+        <tr><td data-label="CCPA category">Geolocation</td><td data-label="Specific data"><strong>None.</strong> We do not collect precise or coarse location data.</td></tr>
+        <tr><td data-label="CCPA category">Audio, electronic, visual information</td><td data-label="Specific data">Profile photo, banner image, workout photos, competition photos (no audio)</td></tr>
+        <tr><td data-label="CCPA category">Professional / employment</td><td data-label="Specific data"><strong>None.</strong></td></tr>
+        <tr><td data-label="CCPA category">Education</td><td data-label="Specific data"><strong>None.</strong></td></tr>
+        <tr><td data-label="CCPA category">Inferences</td><td data-label="Specific data">Derived statistics (XP totals, attribute scores, streak counts, OVR rating)</td></tr>
+        <tr><td data-label="CCPA category"><strong>Sensitive personal information (CPRA)</strong></td><td data-label="Specific data">Fitness / health-related data (workout intensity, duration, weigh-ins, training-camp progress)</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Purposes</strong>: see §2 ("How We Use Your Information").</p>
+    <p><strong>Sources</strong>: directly from you (when you create an account, log workouts, etc.) and from our service providers (subscription state from RevenueCat, crash data from Sentry).</p>
+    <p><strong>Recipients</strong>: the service providers listed in §3.1 (Supabase, RevenueCat, Apple, Sentry, GitHub). We do not "sell" your personal information and we do not "share" it for cross-context behavioral advertising, as those terms are defined under the CCPA/CPRA. We have not sold or shared personal information in the preceding 12 months.</p>
+    <p><strong>Your CCPA/CPRA rights:</strong></p>
+    <ul>
+      <li><strong>Right to know</strong> — request the categories and specific pieces of personal information we hold about you, the sources, the purposes, and the recipients.</li>
+      <li><strong>Right to delete</strong> — request deletion of your personal information (use Settings → Delete Account or email us).</li>
+      <li><strong>Right to correct</strong> — request correction of inaccurate personal information.</li>
+      <li><strong>Right to opt out of sale or sharing</strong> — not applicable, because we do not sell or share. (No "Do Not Sell or Share My Personal Information" link is required because we have nothing to opt out of.)</li>
+      <li><strong>Right to limit use of sensitive personal information</strong> — you may request that we limit our use of your fitness / health-related data to providing the app's core training-tracker features. We already do this by default — see the "Sensitive personal information" paragraph in §1 — so no separate request is necessary, but you may confirm by emailing us.</li>
+      <li><strong>Right to non-discrimination</strong> — we will not deny you service, charge you a different price, or provide a different level of service because you exercised any of these rights.</li>
+      <li><strong>Authorized agents</strong> — you may designate an authorized agent to submit a request on your behalf. We will verify both your identity and the agent's authority before processing.</li>
+    </ul>
+    <p><strong>How to exercise these rights:</strong> email <strong>renshicombat@yahoo.com</strong> with the subject line <strong>"CCPA request"</strong> and state which right you're exercising. We will respond within 45 days (we may extend by another 45 days with notice if needed).</p>
+    <p><strong>"Shine the Light" (California Civil Code §1798.83):</strong> Renshi does not share personal information with third parties for those third parties' own direct marketing purposes, so there is nothing to disclose under this law.</p>
+
+    <h2>11. Changes to This Policy</h2>
     <p>We may update this policy from time to time. When we do, we'll change the "Last Updated" date above and, for material changes, notify users in the App or by email. Continued use of Renshi after a change means you accept the updated policy.</p>
 
-    <h2>11. Contact</h2>
+    <h2>12. Contact</h2>
     <p>Questions about this policy? Email <strong>renshicombat@yahoo.com</strong>.</p>
-    <p>For privacy / data rights requests, please use the subject line patterns listed in §5 so we can route them quickly.</p>
+    <p>For privacy / data rights requests, please use the subject line patterns listed in §5 and §10 so we can route them quickly.</p>
 
     <div class="footer-note">Renshi · Combat-sports training tracker · renshicombat@yahoo.com</div>
   </div>
