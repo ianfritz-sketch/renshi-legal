@@ -18,96 +18,25 @@
       --warn-text: #fca5a5;
     }
     * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 48px 24px 96px;
-    }
-    h1 {
-      font-size: 32px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      margin: 0 0 8px;
-      color: #fff;
-    }
-    h2 {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      margin: 40px 0 12px;
-      color: #fff;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
-    }
-    h3 {
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      margin: 28px 0 10px;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+    h1 { font-size: 32px; font-weight: 900; letter-spacing: 1px; margin: 0 0 8px; color: #fff; }
+    h2 { font-size: 22px; font-weight: 800; letter-spacing: 0.5px; margin: 40px 0 12px; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    h3 { font-size: 16px; font-weight: 800; letter-spacing: 0.5px; margin: 28px 0 10px; color: var(--gold); text-transform: uppercase; }
     p { margin: 0 0 14px; color: #e5e5e5; }
     strong { color: #fff; font-weight: 700; }
     a { color: var(--gold); text-decoration: underline; }
     a:hover { color: #fde047; }
     ul, ol { margin: 0 0 16px; padding-left: 22px; }
     li { margin-bottom: 6px; color: #e5e5e5; }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 13px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2px 6px;
-      color: var(--gold);
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 0 0 24px;
-    }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; color: var(--gold); }
+    .meta { color: var(--muted); font-size: 13px; margin: 0 0 24px; }
     .meta strong { color: #fff; }
-    .lead {
-      font-size: 16px;
-      color: #d4d4d4;
-      margin: 0 0 32px;
-    }
-    .callout {
-      background: rgba(250, 204, 21, 0.06);
-      border: 1px solid rgba(250, 204, 21, 0.35);
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 16px 0;
-      color: #e5e5e5;
-    }
-    .warn {
-      background: var(--warn-bg);
-      border: 1px solid var(--warn-border);
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 16px 0;
-      color: #e5e5e5;
-    }
+    .lead { font-size: 16px; color: #d4d4d4; margin: 0 0 32px; }
+    .callout { background: rgba(250, 204, 21, 0.06); border: 1px solid rgba(250, 204, 21, 0.35); border-radius: 12px; padding: 16px 18px; margin: 16px 0; color: #e5e5e5; }
+    .warn { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 12px; padding: 16px 18px; margin: 16px 0; color: #e5e5e5; }
     .warn strong { color: var(--warn-text); }
-    .footer-note {
-      margin-top: 64px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      color: var(--dim);
-      font-size: 13px;
-      text-align: center;
-    }
+    .footer-note { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--dim); font-size: 13px; text-align: center; }
     @media (max-width: 600px) {
       .wrap { padding: 32px 18px 64px; }
       h1 { font-size: 26px; }
@@ -118,7 +47,7 @@
 <body>
   <div class="wrap">
     <h1>Terms of Service</h1>
-    <p class="meta"><strong>Effective Date:</strong> May 21, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 22, 2026 (moderation flow accuracy pass)</p>
+    <p class="meta"><strong>Effective Date:</strong> May 21, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 22, 2026 (US-and-non-EU launch posture)</p>
 
     <p class="lead">Welcome to <strong>Renshi</strong>. These Terms of Service ("Terms") govern your use of the Renshi mobile application ("App") operated by Ian Fritz, a sole proprietorship based in Utah, United States ("we," "us"). By creating an account or using Renshi, you agree to these Terms. If you don't agree, don't use the App.</p>
 
@@ -127,6 +56,7 @@
 
     <h2>2. Eligibility</h2>
     <p>You must be at least 13 years old to use Renshi. If you're under 18, you represent that a parent or guardian has reviewed and accepted these Terms on your behalf.</p>
+    <div class="callout"><p><strong>Service availability.</strong> Renshi is currently offered to residents of the United States and other countries <strong>outside the European Union (EU), the European Economic Area (EEA), and the United Kingdom (UK)</strong>. When you create an account, you affirm that you are not a resident of those regions. We do not knowingly accept signups from residents of those jurisdictions at this time. If you create an account while located in one of those regions, you may not be able to exercise certain rights you would otherwise have under your local laws (such as the GDPR or UK GDPR); your remedy is to stop using the App and request deletion of your account from Settings → Delete Account.</p></div>
 
     <h2>3. Your Account</h2>
     <p>You're responsible for keeping your password secure and for all activity on your account. Notify us at <strong>renshicombat@yahoo.com</strong> if you suspect unauthorized access. You must provide accurate information when creating your account.</p>
@@ -165,9 +95,7 @@
     <p>The Renshi name, logo, designs, and code are owned by Ian Fritz. You may not copy, modify, or redistribute any part of the App without permission.</p>
 
     <h2>8. Health and Safety Disclaimer</h2>
-    <div class="warn">
-      <p><strong>Renshi is not a substitute for medical advice.</strong> Combat sports and exercise carry real risks of injury, including serious injury and death. You assume full responsibility for your training. Consult a qualified healthcare provider before starting any exercise program, especially if you have a medical condition or are recovering from an injury. We make no claims about the accuracy or appropriateness of any training data shown in the App.</p>
-    </div>
+    <div class="warn"><p><strong>Renshi is not a substitute for medical advice.</strong> Combat sports and exercise carry real risks of injury, including serious injury and death. You assume full responsibility for your training. Consult a qualified healthcare provider before starting any exercise program, especially if you have a medical condition or are recovering from an injury. We make no claims about the accuracy or appropriateness of any training data shown in the App.</p></div>
 
     <h2>9. Disclaimer of Warranties</h2>
     <p>Renshi is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranty of any kind, express or implied. We do not warrant that the App will be uninterrupted, error-free, secure, or that any defects will be corrected. To the maximum extent permitted by law, we disclaim all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.</p>
