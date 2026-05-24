@@ -1,76 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service — Renshi</title>
   <style>
-    :root {
-      --bg: #0a0a0a;
-      --surface: #141414;
-      --border: #262626;
-      --text: #f5f5f5;
-      --muted: #a3a3a3;
-      --dim: #737373;
-      --gold: #facc15;
-      --warn-bg: rgba(252, 165, 165, 0.08);
-      --warn-border: rgba(252, 165, 165, 0.45);
-      --warn-text: #fca5a5;
-    }
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
-    h1 { font-size: 32px; font-weight: 900; letter-spacing: 1px; margin: 0 0 8px; color: #fff; }
-    h2 { font-size: 22px; font-weight: 800; letter-spacing: 0.5px; margin: 40px 0 12px; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
-    h3 { font-size: 16px; font-weight: 800; letter-spacing: 0.5px; margin: 28px 0 10px; color: var(--gold); text-transform: uppercase; }
-    p { margin: 0 0 14px; color: #e5e5e5; }
-    strong { color: #fff; font-weight: 700; }
-    a { color: var(--gold); text-decoration: underline; }
-    a:hover { color: #fde047; }
-    ul, ol { margin: 0 0 16px; padding-left: 22px; }
-    li { margin-bottom: 6px; color: #e5e5e5; }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; color: var(--gold); }
-    .meta { color: var(--muted); font-size: 13px; margin: 0 0 24px; }
-    .meta strong { color: #fff; }
-    .lead { font-size: 16px; color: #d4d4d4; margin: 0 0 32px; }
-    .callout { background: rgba(250, 204, 21, 0.06); border: 1px solid rgba(250, 204, 21, 0.35); border-radius: 12px; padding: 16px 18px; margin: 16px 0; color: #e5e5e5; }
-    .warn { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 12px; padding: 16px 18px; margin: 16px 0; color: #e5e5e5; }
-    .warn strong { color: var(--warn-text); }
-    .footer-note { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--dim); font-size: 13px; text-align: center; }
-    @media (max-width: 600px) {
-      .wrap { padding: 32px 18px 64px; }
-      h1 { font-size: 26px; }
-      h2 { font-size: 19px; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin: 0 0 20px;
+      color: #ffffff;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      margin: 40px 0 12px;
+      padding-top: 8px;
+      color: #ffffff;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 24px 0 8px;
+      color: #ffffff;
+    }
+    p, li {
+      color: #d4d4d4;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    p { margin: 0 0 16px; }
+    ul, ol {
+      margin: 0 0 16px;
+      padding-left: 22px;
+    }
+    li { margin-bottom: 8px; }
+    strong { color: #ffffff; }
+    a {
+      color: #facc15;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { opacity: 0.85; }
+    .meta {
+      color: #a3a3a3;
+      font-size: 13px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .meta strong { color: #d4d4d4; }
+    .intro {
+      font-size: 15px;
+      color: #d4d4d4;
+      margin-bottom: 8px;
+    }
+    .availability {
+      border: 1px solid rgba(250, 204, 21, 0.35);
+      background: rgba(250, 204, 21, 0.08);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 18px 0 8px;
+    }
+    .availability strong { color: #facc15; }
+    .availability p { margin: 0; color: #d4d4d4; font-size: 14px; line-height: 1.7; }
+    .agent-block {
+      border-left: 2px solid #facc15;
+      padding: 8px 16px;
+      margin: 14px 0 18px;
+      background: rgba(250, 204, 21, 0.05);
+      border-radius: 4px;
+    }
+    .agent-block p { margin: 0; font-size: 14px; line-height: 1.7; }
+    .agent-block strong { color: #facc15; }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
+ 
     <h1>Terms of Service</h1>
-    <p class="meta"><strong>Effective Date:</strong> May 21, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 22, 2026 (US-and-non-EU launch posture)</p>
-
-    <p class="lead">Welcome to <strong>Renshi</strong>. These Terms of Service ("Terms") govern your use of the Renshi mobile application ("App") operated by Ian Fritz, a sole proprietorship based in Utah, United States ("we," "us"). By creating an account or using Renshi, you agree to these Terms. If you don't agree, don't use the App.</p>
-
+    <p class="meta">
+      <strong>Effective Date:</strong> May 21, 2026 &nbsp;·&nbsp;
+      <strong>Last Updated:</strong> May 23, 2026 (added §8 Copyright Policy / DMCA)
+    </p>
+ 
+    <p class="intro">
+      Welcome to <strong>Renshi</strong>. These Terms of Service ("Terms") govern your use of the
+      Renshi mobile application ("App") operated by Ian Fritz, a sole proprietorship based in Utah,
+      United States ("we," "us"). By creating an account or using Renshi, you agree to these Terms.
+      If you don't agree, don't use the App.
+    </p>
+ 
     <h2>1. The Service</h2>
-    <p>Renshi is a workout-tracking app for combat-sports athletes. You can log training sessions, earn XP and badges, follow other athletes, join teams, and view leaderboards.</p>
-
+    <p>
+      Renshi is a workout-tracking app for combat-sports athletes. You can log training sessions,
+      earn XP and badges, follow other athletes, join teams, and view leaderboards.
+    </p>
+ 
     <h2>2. Eligibility</h2>
-    <p>You must be at least 13 years old to use Renshi. If you're under 18, you represent that a parent or guardian has reviewed and accepted these Terms on your behalf.</p>
-    <div class="callout"><p><strong>Service availability.</strong> Renshi is currently offered to residents of the United States and other countries <strong>outside the European Union (EU), the European Economic Area (EEA), and the United Kingdom (UK)</strong>. When you create an account, you affirm that you are not a resident of those regions. We do not knowingly accept signups from residents of those jurisdictions at this time. If you create an account while located in one of those regions, you may not be able to exercise certain rights you would otherwise have under your local laws (such as the GDPR or UK GDPR); your remedy is to stop using the App and request deletion of your account from Settings → Delete Account.</p></div>
-
+    <p>
+      You must be at least 13 years old to use Renshi. If you're under 18, you represent that a
+      parent or guardian has reviewed and accepted these Terms on your behalf.
+    </p>
+ 
+    <div class="availability">
+      <p>
+        <strong>Service availability.</strong> Renshi is currently offered to residents of the
+        United States and other countries <strong>outside the European Union (EU), the European
+        Economic Area (EEA), and the United Kingdom (UK)</strong>. When you create an account, you
+        affirm that you are not a resident of those regions. We do not knowingly accept signups
+        from residents of those jurisdictions at this time. If you create an account while located
+        in one of those regions, you may not be able to exercise certain rights you would otherwise
+        have under your local laws (such as the GDPR or UK GDPR); your remedy is to stop using the
+        App and request deletion of your account from Settings → Delete Account.
+      </p>
+    </div>
+ 
     <h2>3. Your Account</h2>
-    <p>You're responsible for keeping your password secure and for all activity on your account. Notify us at <strong>renshicombat@yahoo.com</strong> if you suspect unauthorized access. You must provide accurate information when creating your account.</p>
-
+    <p>
+      You're responsible for keeping your password secure and for all activity on your account.
+      Notify us at <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a> if you
+      suspect unauthorized access. You must provide accurate information when creating your account.
+    </p>
+ 
     <h2>4. Subscriptions, Trials, and Billing</h2>
-    <p>Renshi offers a 7-day free trial upon sign-up. After the trial, continued access requires a paid subscription:</p>
+    <p>
+      Renshi offers a 7-day free trial upon sign-up. After the trial, continued access requires a
+      paid subscription:
+    </p>
     <ul>
       <li><strong>Monthly:</strong> $2.99 per month, auto-renewing</li>
       <li><strong>Yearly:</strong> $29.99 per year, auto-renewing</li>
     </ul>
-    <p>All subscriptions are processed through Apple's App Store and managed by Apple. You can cancel anytime from your iOS device's <strong>Settings → [Your Name] → Subscriptions</strong>. Cancellations take effect at the end of the current billing period; refunds for unused time are subject to Apple's refund policies, not ours.</p>
-    <p>We may offer promotional codes that grant temporary access. Promo codes are non-transferable, may not be combined, and may be revoked if used in violation of these Terms.</p>
-    <p>Prices are subject to change. We'll give existing subscribers reasonable notice before any price increase takes effect.</p>
-
+    <p>
+      All subscriptions are processed through Apple's App Store and managed by Apple. You can
+      cancel anytime from your iOS device's <strong>Settings → [Your Name] → Subscriptions</strong>.
+      Cancellations take effect at the end of the current billing period; refunds for unused time
+      are subject to Apple's refund policies, not ours.
+    </p>
+    <p>
+      We may offer promotional codes that grant temporary access. Promo codes are non-transferable,
+      may not be combined, and may be revoked if used in violation of these Terms.
+    </p>
+    <p>
+      Prices are subject to change. We'll give existing subscribers reasonable notice before any
+      price increase takes effect.
+    </p>
+ 
     <h2>5. Acceptable Use</h2>
     <p>You agree not to:</p>
     <ul>
@@ -82,41 +175,173 @@
       <li>Use automated tools to scrape, copy, or manipulate data</li>
       <li>Falsify workout data or otherwise abuse the leaderboard system</li>
     </ul>
-
+ 
     <h3>Reporting and moderation</h3>
-    <p>Every Feed post, profile, and team has a <strong>⋯ menu</strong> with a <strong>Report</strong> option. Reports for spam, harassment, sexual content, violence/self-harm, or "other" file into our moderation console where we review them with a target response time of 24 hours.</p>
-    <p>For <strong>minor-safety concerns</strong> (suspected child endangerment, exploitation, or grooming), the in-app Report menu includes a dedicated <strong>"Minor in danger"</strong> option that opens your mail app pre-addressed to <strong>renshicombat@yahoo.com</strong> with subject <strong>"Minor safety report"</strong>. You can also email that address directly with that subject line. We treat these reports as the highest priority and — if the content suggests harm to a child — file a report with the National Center for Missing &amp; Exploited Children (NCMEC) and contact law enforcement as required by applicable law.</p>
-    <p>We remove violating content, suspend or terminate the responsible account, and may remove any content at our discretion. We may suspend or terminate your account if you violate these rules.</p>
-
+    <p>
+      Every Feed post, profile, and team has a <strong>⋯ menu</strong> with a <strong>Report</strong>
+      option. Reports for spam, harassment, sexual content, violence/self-harm, or "other" file
+      into our moderation console where we review them with a target response time of 24 hours.
+    </p>
+    <p>
+      For <strong>minor-safety concerns</strong> (suspected child endangerment, exploitation, or
+      grooming), the in-app Report menu includes a dedicated <strong>"Minor in danger"</strong>
+      option that opens your mail app pre-addressed to
+      <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a> with subject
+      <strong>"Minor safety report"</strong>. You can also email that address directly with that
+      subject line. We treat these reports as the highest priority and — if the content suggests
+      harm to a child — file a report with the National Center for Missing &amp; Exploited
+      Children (NCMEC) and contact law enforcement as required by applicable law.
+    </p>
+    <p>
+      We remove violating content, suspend or terminate the responsible account, and may remove
+      any content at our discretion. We may suspend or terminate your account if you violate these rules.
+    </p>
+ 
     <h2>6. Your Content</h2>
-    <p>You retain ownership of the content you post (workout notes, photos, profile content, etc.). By posting, you grant us a worldwide, non-exclusive, royalty-free license to host, display, and distribute that content within the App as needed to operate the service. You're responsible for the content you upload and confirm that you have the right to upload it.</p>
-
+    <p>
+      You retain ownership of the content you post (workout notes, photos, profile content, etc.).
+      By posting, you grant us a worldwide, non-exclusive, royalty-free license to host, display,
+      and distribute that content within the App as needed to operate the service. You're
+      responsible for the content you upload and confirm that you have the right to upload it.
+    </p>
+ 
     <h2>7. Intellectual Property</h2>
-    <p>The Renshi name, logo, designs, and code are owned by Ian Fritz. You may not copy, modify, or redistribute any part of the App without permission.</p>
-
-    <h2>8. Health and Safety Disclaimer</h2>
-    <div class="warn"><p><strong>Renshi is not a substitute for medical advice.</strong> Combat sports and exercise carry real risks of injury, including serious injury and death. You assume full responsibility for your training. Consult a qualified healthcare provider before starting any exercise program, especially if you have a medical condition or are recovering from an injury. We make no claims about the accuracy or appropriateness of any training data shown in the App.</p></div>
-
-    <h2>9. Disclaimer of Warranties</h2>
-    <p>Renshi is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranty of any kind, express or implied. We do not warrant that the App will be uninterrupted, error-free, secure, or that any defects will be corrected. To the maximum extent permitted by law, we disclaim all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.</p>
-
-    <h2>10. Limitation of Liability</h2>
-    <p>To the maximum extent permitted by law, in no event will we be liable for any indirect, incidental, consequential, special, or punitive damages, including loss of data, loss of profits, personal injury, or property damage arising out of your use of Renshi. Our total liability for any claim related to the App is limited to the amount you paid us in the 12 months preceding the claim, or $100, whichever is greater.</p>
-    <p>Some jurisdictions do not allow limitations of liability, so portions of this section may not apply to you.</p>
-
-    <h2>11. Termination</h2>
-    <p>You may stop using Renshi at any time by deleting your account from <strong>Settings → Delete Account</strong>. We may suspend or terminate your account if you violate these Terms or if we discontinue the service. Upon termination, your right to use the App ends immediately.</p>
-
-    <h2>12. Changes to These Terms</h2>
-    <p>We may update these Terms from time to time. When we do, we'll change the "Last Updated" date above and notify you in the App for material changes. Continued use after a change means you accept the updated Terms.</p>
-
-    <h2>13. Governing Law and Disputes</h2>
-    <p>These Terms are governed by the laws of the State of Utah, United States, without regard to conflict-of-laws principles. Any dispute arising from these Terms or your use of Renshi will be resolved in the state or federal courts located in Utah, and you consent to the personal jurisdiction of those courts.</p>
-
-    <h2>14. Contact</h2>
-    <p>Questions about these Terms? Email <strong>renshicombat@yahoo.com</strong>.</p>
-
-    <div class="footer-note">Renshi · Combat-sports training tracker · renshicombat@yahoo.com</div>
+    <p>
+      The Renshi name, logo, designs, and code are owned by Ian Fritz. You may not copy, modify,
+      or redistribute any part of the App without permission.
+    </p>
+ 
+    <h2>8. Copyright Policy (DMCA)</h2>
+    <p>
+      We respect intellectual property rights and respond to clear notices of alleged copyright
+      infringement that comply with the U.S. Digital Millennium Copyright Act ("DMCA"). This
+      policy explains how to send a takedown notice, how to send a counter-notice if your content
+      was removed in error, and how we handle repeat infringers.
+    </p>
+ 
+    <h3>Designated Copyright Agent</h3>
+    <p>
+      Notices of alleged infringement and counter-notices should be sent to our DMCA Designated
+      Agent, on file with the U.S. Copyright Office:
+    </p>
+    <div class="agent-block">
+      <p>
+        <strong>Ian Fritz, Designated Agent — Renshi</strong><br>
+        Email: <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a><br>
+        Mailing address available on request via the email above.
+      </p>
+    </div>
+    <p>
+      You can also verify our registration at the U.S. Copyright Office's public directory:
+      <a href="https://www.copyright.gov/dmca-directory/" target="_blank" rel="noopener">https://www.copyright.gov/dmca-directory/</a>
+    </p>
+ 
+    <h3>How to file a takedown notice</h3>
+    <p>
+      If you believe content in the App infringes your copyright, send our Designated Agent a
+      written notice that includes <strong>all</strong> of the following (required by
+      17 U.S.C. § 512(c)(3)):
+    </p>
+    <ol>
+      <li>A physical or electronic signature of the copyright owner or someone authorized to act on their behalf.</li>
+      <li>Identification of the copyrighted work you claim has been infringed (or, if multiple works on a single page, a representative list).</li>
+      <li>Identification of the material you claim is infringing and information sufficient to locate it in the App (e.g., a screenshot, the username, the post date, and a description).</li>
+      <li>Your contact information — name, mailing address, telephone number, and email address.</li>
+      <li>A statement that you have a good-faith belief that the use is not authorized by the copyright owner, its agent, or the law.</li>
+      <li>A statement, under penalty of perjury, that the information in your notice is accurate and that you are the copyright owner or are authorized to act on the owner's behalf.</li>
+    </ol>
+    <p>
+      Incomplete notices may not be valid under the DMCA and may delay our response.
+      <strong>Misrepresentations in a takedown notice may subject you to liability under
+      17 U.S.C. § 512(f).</strong>
+    </p>
+ 
+    <h3>How to file a counter-notice</h3>
+    <p>
+      If your content was removed and you believe the removal was a mistake or that you have the
+      right to use the material, you may send our Designated Agent a counter-notice containing
+      <strong>all</strong> of the following (required by 17 U.S.C. § 512(g)(3)):
+    </p>
+    <ol>
+      <li>Your physical or electronic signature.</li>
+      <li>Identification of the material that was removed and the location where it appeared before removal.</li>
+      <li>A statement, under penalty of perjury, that you have a good-faith belief the material was removed as a result of mistake or misidentification.</li>
+      <li>Your name, address, and telephone number, and a statement that you consent to the jurisdiction of the federal court in the district where you live (or, if outside the U.S., any judicial district in which we may be found), and that you will accept service of process from the person who submitted the original notice.</li>
+    </ol>
+    <p>
+      After receiving a valid counter-notice we may, at our discretion, restore the removed
+      material in 10 to 14 business days unless the original claimant notifies us they have filed
+      a court action.
+    </p>
+ 
+    <h3>Repeat-infringer policy</h3>
+    <p>
+      We will terminate the accounts of users we determine, in our reasonable discretion, to be
+      repeat copyright infringers, as required by 17 U.S.C. § 512(i).
+    </p>
+ 
+    <h2>9. Health and Safety Disclaimer</h2>
+    <p>
+      <strong>Renshi is not a substitute for medical advice.</strong> Combat sports and exercise
+      carry real risks of injury, including serious injury and death. You assume full
+      responsibility for your training. Consult a qualified healthcare provider before starting
+      any exercise program, especially if you have a medical condition or are recovering from an
+      injury. We make no claims about the accuracy or appropriateness of any training data shown
+      in the App.
+    </p>
+ 
+    <h2>10. Disclaimer of Warranties</h2>
+    <p>
+      Renshi is provided <strong>"as is"</strong> and <strong>"as available"</strong> without
+      warranty of any kind, express or implied. We do not warrant that the App will be
+      uninterrupted, error-free, secure, or that any defects will be corrected. To the maximum
+      extent permitted by law, we disclaim all implied warranties, including merchantability,
+      fitness for a particular purpose, and non-infringement.
+    </p>
+ 
+    <h2>11. Limitation of Liability</h2>
+    <p>
+      To the maximum extent permitted by law, in no event will we be liable for any indirect,
+      incidental, consequential, special, or punitive damages, including loss of data, loss of
+      profits, personal injury, or property damage arising out of your use of Renshi. Our total
+      liability for any claim related to the App is limited to the amount you paid us in the 12
+      months preceding the claim, or $100, whichever is greater.
+    </p>
+    <p>
+      Some jurisdictions do not allow limitations of liability, so portions of this section may
+      not apply to you.
+    </p>
+ 
+    <h2>12. Termination</h2>
+    <p>
+      You may stop using Renshi at any time by deleting your account from
+      <strong>Settings → Delete Account</strong>. We may suspend or terminate your account if you
+      violate these Terms or if we discontinue the service. Upon termination, your right to use
+      the App ends immediately.
+    </p>
+ 
+    <h2>13. Changes to These Terms</h2>
+    <p>
+      We may update these Terms from time to time. When we do, we'll change the "Last Updated"
+      date above and notify you in the App for material changes. Continued use after a change
+      means you accept the updated Terms.
+    </p>
+ 
+    <h2>14. Governing Law and Disputes</h2>
+    <p>
+      These Terms are governed by the laws of the State of Utah, United States, without regard to
+      conflict-of-laws principles. Any dispute arising from these Terms or your use of Renshi will
+      be resolved in the state or federal courts located in Utah, and you consent to the personal
+      jurisdiction of those courts.
+    </p>
+ 
+    <h2>15. Contact</h2>
+    <p>
+      Questions about these Terms? Email
+      <a href="mailto:renshicombat@yahoo.com">renshicombat@yahoo.com</a>.
+    </p>
+ 
   </div>
 </body>
 </html>
+ 
